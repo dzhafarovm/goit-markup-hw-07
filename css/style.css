@@ -851,7 +851,6 @@ textarea {
 .form-policy span {
   display: flex;
   align-items: center;
-  margin-left: 10px;
   color: var(--secondary-text-color);
   font-weight: 400;
   font-size: 14px;
