@@ -710,13 +710,13 @@ img {
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop.is-hidden {
+.backdrop__is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
 }
 
-.backdrop.is-hidden .modal {
+.backdrop__is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.5);
 }
 
@@ -735,7 +735,7 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close-btn {
+.modal__close-btn {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -754,18 +754,18 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close-btn:hover,
-.close-btn:focus {
+.modal__close-btn:hover,
+.modal__close-btn:focus {
   fill: var(--accent-color);
 }
 
-.modal-form {
+.modal__form {
   width: 448px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.modal-form .paragraph {
+.modal__paragraph {
   margin: 0;
   margin-bottom: 12px;
 
@@ -776,14 +776,14 @@ img {
   text-align: center;
 }
 
-.form-field {
+.modal__form-field {
   position: relative;
   display: flex;
   flex-direction: column;
   margin-top: 10px;
 }
 
-.form-field span {
+.modal__name {
   margin-bottom: 4px;
 
   color: var(--secondary-text-color);
@@ -793,14 +793,14 @@ img {
   letter-spacing: 0.01em;
 }
 
-.form-field input {
+.modal__input {
   padding: 11px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-svg {
+.modal__svg {
   position: absolute;
   top: 50%;
   left: 12px;
@@ -808,23 +808,23 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-field:hover input,
-.form-field:hover textarea {
+.modal__form-field:hover .modal__input,
+.modal__form-field:hover .modal__textarea {
   cursor: pointer;
 }
 
-.form-field:focus-within input,
-.form-field:focus-within textarea {
+.modal__form-field:focus-within .modal__input,
+.modal__form-field:focus-within .modal__textarea {
   border-color: var(--accent-color);
   outline: none;
   cursor: text;
 }
 
-.form-field:focus-within .form-svg {
+.modal__form-field:focus-within .modal__svg {
   fill: var(--accent-color);
 }
 
-textarea {
+.modal__textarea {
   resize: none;
   padding: 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -832,7 +832,7 @@ textarea {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-field textarea::placeholder {
+.modal__textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
   font-weight: 400;
   font-size: 12px;
@@ -840,7 +840,7 @@ textarea {
   letter-spacing: 0.01em;
 }
 
-.form-policy {
+.modal__form-policy {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -848,7 +848,7 @@ textarea {
   width: 100%;
 }
 
-.form-policy span {
+.modal__agreement {
   display: flex;
   align-items: center;
   color: var(--secondary-text-color);
@@ -858,7 +858,7 @@ textarea {
   letter-spacing: 0.03em;
 }
 
-.checkbox {
+.modal__checkbox {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -872,7 +872,7 @@ textarea {
   overflow: hidden;
 }
 
-.form-policy span::before {
+.modal__agreement::before {
   content: '';
   display: block;
   margin-right: 10px;
@@ -882,7 +882,7 @@ textarea {
   border-radius: 2px;
 }
 
-.checkbox:checked + span::before {
+.modal__checkbox:checked + .modal__agreement::before {
   border-color: var(--accent-color);
   background-color: var(--accent-color);
   background-image: url(../images/icon-check.svg);
@@ -890,7 +890,7 @@ textarea {
   background-origin: border-box;
 }
 
-.form-policy a {
+.modal__agreement-link {
   color: var(--accent-color);
   font-weight: 400;
   font-size: 14px;
@@ -899,7 +899,7 @@ textarea {
   text-decoration: underline;
 }
 
-.modal-btn {
+.modal__btn {
   display: block;
   margin-top: 30px;
   margin-left: auto;
@@ -921,6 +921,6 @@ textarea {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-btn:hover {
+.modal__btn:hover {
   background-color: var(--btn-hover-color);
 }
