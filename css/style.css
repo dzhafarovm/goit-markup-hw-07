@@ -171,7 +171,7 @@ img {
 }
 
 /* Герой */
-.hero-section {
+.hero {
   max-width: 1600px;
   height: 600px;
   margin-left: auto;
@@ -188,7 +188,7 @@ img {
   background-size: cover;
 }
 
-.hero-section__title {
+.hero__title {
   margin-top: 0;
   margin-bottom: 35px;
 
@@ -200,7 +200,7 @@ img {
   text-transform: uppercase;
 }
 
-.hero-section__btn {
+.hero__btn {
   padding: 10px 32px;
   border: none;
   border-radius: 4px;
@@ -221,7 +221,7 @@ img {
 }
 
 /* Наши возможности */
-.can-section {
+.can {
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -238,7 +238,7 @@ img {
   margin-right: 30px;
 }
 
-.can-set__box {
+.can-set__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -266,7 +266,7 @@ img {
 }
 
 /* Чем мы занимаемся */
-.work-section {
+.work {
   padding-bottom: 94px;
 }
 
@@ -279,9 +279,7 @@ img {
   margin-right: 30px;
 }
 
-.work-section__title,
-.team-section__title,
-.clients-section__title {
+.block-title {
   margin-top: 0;
   margin-bottom: 50px;
 
@@ -314,7 +312,7 @@ img {
 }
 
 /* Наша команда */
-.team-section {
+.team {
   padding-top: 94px;
   padding-bottom: 94px;
 
@@ -370,8 +368,8 @@ img {
   margin-right: 10px;
 }
 
-.icons-set__box,
-.icons-set__connect-box {
+.icons-set__link,
+.icons-set__connect-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -380,7 +378,7 @@ img {
   border-radius: 50%;
 }
 
-.icons-set__box {
+.icons-set__link {
   background-color: var(--white-color);
   fill: var(--clients-networks-color);
 
@@ -388,14 +386,14 @@ img {
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icons-set__box:hover,
-.icons-set__box:focus {
+.icons-set__link:hover,
+.icons-set__link:focus {
   background-color: var(--accent-color);
   fill: var(--white-color);
 }
 
 /* Секция "Постоянные клиенты" */
-.clients-section {
+.clients {
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -409,7 +407,7 @@ img {
   margin-right: 30px;
 }
 
-.client-set__box {
+.client-set__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -423,8 +421,8 @@ img {
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.client-set__box:hover,
-.client-set__box:focus {
+.client-set__link:hover,
+.client-set__link:focus {
   border-color: var(--accent-color);
   fill: var(--accent-color);
 }
@@ -477,11 +475,11 @@ img {
   color: var(--accent-color);
 }
 
-.connect-cont {
+.connect {
   margin-left: 70px;
 }
 
-.connect-cont__name {
+.connect__name {
   margin-top: 0;
   margin-bottom: 20px;
 
@@ -492,15 +490,15 @@ img {
   text-transform: uppercase;
 }
 
-.icons-set__connect-box {
+.icons-set__connect-link {
   background-color: var(--footlink-bg-color);
   fill: var(--white-color);
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icons-set__connect-box:hover,
-.icons-set__connect-box:focus {
+.icons-set__connect-link:hover,
+.icons-set__connect-link:focus {
   background-color: var(--accent-color);
 }
 
@@ -710,13 +708,13 @@ img {
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop__is-hidden {
+.backdrop--hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
 }
 
-.backdrop__is-hidden .modal {
+.backdrop--hidden .modal {
   transform: translate(-50%, -50%) scale(0.5);
 }
 
@@ -759,13 +757,13 @@ img {
   fill: var(--accent-color);
 }
 
-.modal__form {
+.form {
   width: 448px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.modal__paragraph {
+.form__paragraph {
   margin: 0;
   margin-bottom: 12px;
 
@@ -776,14 +774,13 @@ img {
   text-align: center;
 }
 
-.modal__form-field {
-  position: relative;
+.form__field {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
 }
 
-.modal__name {
+.form__name {
   margin-bottom: 4px;
 
   color: var(--secondary-text-color);
@@ -793,38 +790,46 @@ img {
   letter-spacing: 0.01em;
 }
 
-.modal__input {
+.form__input {
+  width: 100%;
   padding: 11px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal__svg {
+.form__box {
+  position: relative;
+}
+
+.form__svg {
   position: absolute;
   top: 50%;
   left: 12px;
   fill: var(--primary-text-color);
+  transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal__form-field:hover .modal__input,
-.modal__form-field:hover .modal__textarea {
+.form__field:hover .form__input,
+.form__field:hover .form__textarea {
+  border-color: var(--accent-color);
   cursor: pointer;
 }
 
-.modal__form-field:focus-within .modal__input,
-.modal__form-field:focus-within .modal__textarea {
+.form__field:focus-within .form__input,
+.form__field:focus-within .form__textarea {
   border-color: var(--accent-color);
   outline: none;
   cursor: text;
 }
 
-.modal__form-field:focus-within .modal__svg {
+.form__field:focus-within .form__svg,
+.form__field:hover .form__svg {
   fill: var(--accent-color);
 }
 
-.modal__textarea {
+.form__textarea {
   resize: none;
   padding: 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -832,7 +837,7 @@ img {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal__textarea::placeholder {
+.form__textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
   font-weight: 400;
   font-size: 12px;
@@ -840,7 +845,7 @@ img {
   letter-spacing: 0.01em;
 }
 
-.modal__form-policy {
+.form__policy {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -848,7 +853,7 @@ img {
   width: 100%;
 }
 
-.modal__agreement {
+.form__agreement {
   display: flex;
   align-items: center;
   color: var(--secondary-text-color);
@@ -858,7 +863,7 @@ img {
   letter-spacing: 0.03em;
 }
 
-.modal__checkbox {
+.form__checkbox {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -872,7 +877,7 @@ img {
   overflow: hidden;
 }
 
-.modal__agreement::before {
+.form__agreement::before {
   content: '';
   display: block;
   margin-right: 10px;
@@ -882,7 +887,7 @@ img {
   border-radius: 2px;
 }
 
-.modal__checkbox:checked + .modal__agreement::before {
+.form__checkbox:checked + .form__agreement::before {
   border-color: var(--accent-color);
   background-color: var(--accent-color);
   background-image: url(../images/icon-check.svg);
@@ -890,7 +895,7 @@ img {
   background-origin: border-box;
 }
 
-.modal__agreement-link {
+.form__agreement-link {
   color: var(--accent-color);
   font-weight: 400;
   font-size: 14px;
