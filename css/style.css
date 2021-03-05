@@ -846,6 +846,7 @@ img {
 }
 
 .form__policy {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -877,22 +878,22 @@ img {
   overflow: hidden;
 }
 
-.form__agreement::before {
-  content: '';
-  display: block;
-  margin-right: 10px;
-  width: 16px;
-  height: 15px;
-  border: 2px solid var(--primary-text-color);
-  border-radius: 2px;
+.form__policy-use {
+  display: none;
 }
 
-.form__checkbox:checked + .form__agreement::before {
-  border-color: var(--accent-color);
-  background-color: var(--accent-color);
-  background-image: url(../images/icon-check.svg);
-  background-size: contain;
-  background-origin: border-box;
+.form__policy-svg {
+  border: 2px solid var(--primary-text-color);
+  border-radius: 2px;
+  margin-right: 7px;
+}
+
+.form__checkbox:checked + .form__policy-svg {
+  border: none;
+}
+
+.form__checkbox:checked + .form__policy-svg .form__policy-use {
+  display: block;
 }
 
 .form__agreement-link {
