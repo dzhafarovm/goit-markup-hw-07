@@ -42,11 +42,11 @@
   color: $address-color;
 
   transition: color 250ms $transit-time;
-}
 
-.address__link:hover,
-.address__link:focus {
-  color: $accent-color;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
 
 .connect {
@@ -64,16 +64,35 @@
   text-transform: uppercase;
 }
 
-.icons-set__connect-link {
+.connect-set {
+  @extend %list;
+  display: flex;
+  justify-content: center;
+}
+
+.connect-set__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.connect-set__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.connect-set__link {
   background-color: $footlink-bg-color;
   fill: $white-color;
 
-  transition: background-color 250ms $transit-time;
-}
+  transition: background-color 250ms $transit-time, fill 250ms $transit-time;
 
-.icons-set__connect-link:hover,
-.icons-set__connect-link:focus {
-  background-color: $accent-color;
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
 }
 
 .foot-form {
@@ -127,10 +146,10 @@
   cursor: pointer;
 
   transition: background-color 250ms $transit-time;
-}
 
-.foot-form__btn:hover {
-  background-color: $btn-hover-color;
+  &:hover {
+    background-color: $btn-hover-color;
+  }
 }
 
 .foot-form__svg {

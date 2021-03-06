@@ -29,13 +29,13 @@
 
   transition: color 250ms $transit-time, background-color 250ms $transit-time,
     box-shadow 250ms $transit-time;
-}
 
-.button-set__btn:hover,
-.button-set__btn:focus {
-  color: $white-color;
-  background-color: $accent-color;
-  box-shadow: $btn-shadow;
+  &:hover,
+  &:focus {
+    color: $white-color;
+    background-color: $accent-color;
+    box-shadow: $btn-shadow;
+  }
 }
 
 .card-set {
@@ -55,11 +55,17 @@
 
 .product {
   display: block;
-}
 
-.product:hover,
-.product:focus {
-  box-shadow: $card-shadow;
+  &:hover,
+  &:focus {
+    box-shadow: $card-shadow;
+  }
+
+  &:hover .product__overley,
+  &:focus .product__overley {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .product__thumb {
@@ -89,12 +95,6 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 1.55;
-}
-
-.product:hover .product__overley,
-.product:focus .product__overley {
-  transform: translateY(0);
-  opacity: 1;
 }
 
 .product__cont {

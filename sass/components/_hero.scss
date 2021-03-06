@@ -41,8 +41,8 @@
   cursor: pointer;
 
   transition: background-color 250ms $transit-time;
-}
 
-.hero__btn:hover {
-  background-color: $btn-hover-color;
+  &:hover {
+    background-color: $btn-hover-color;
+  }
 }

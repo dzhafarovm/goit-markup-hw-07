@@ -24,10 +24,10 @@
   fill: $clients-networks-color;
 
   transition: border-color 250ms $transit-time, fill 250ms $transit-time;
-}
 
-.client-set__link:hover,
-.client-set__link:focus {
-  border-color: $accent-color;
-  fill: $accent-color;
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+    fill: $accent-color;
+  }
 }

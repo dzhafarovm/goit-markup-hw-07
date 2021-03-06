@@ -30,11 +30,11 @@
   fill: $black-color;
 
   transition: fill 250ms $transit-time;
-}
 
-.modal__close-btn:hover,
-.modal__close-btn:focus {
-  fill: $accent-color;
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
 }
 
 .form {
@@ -58,6 +58,24 @@
   display: flex;
   flex-direction: column;
   margin-top: 10px;
+
+  &:hover .form__input,
+  &:hover .form__textarea {
+    border-color: $accent-color;
+    cursor: pointer;
+  }
+
+  &:focus-within .form__input,
+  &:focus-within .form__textarea {
+    border-color: $accent-color;
+    outline: none;
+    cursor: text;
+  }
+
+  &:focus-within .form__svg,
+  &:hover .form__svg {
+    fill: $accent-color;
+  }
 }
 
 .form__name {
@@ -91,38 +109,20 @@
   transition: fill 250ms $transit-time;
 }
 
-.form__field:hover .form__input,
-.form__field:hover .form__textarea {
-  border-color: $accent-color;
-  cursor: pointer;
-}
-
-.form__field:focus-within .form__input,
-.form__field:focus-within .form__textarea {
-  border-color: $accent-color;
-  outline: none;
-  cursor: text;
-}
-
-.form__field:focus-within .form__svg,
-.form__field:hover .form__svg {
-  fill: $accent-color;
-}
-
 .form__textarea {
   resize: none;
   padding: 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: border-color 250ms $transit-time;
-}
 
-.form__textarea::placeholder {
-  color: rgba(117, 117, 117, 0.5);
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
-  letter-spacing: 0.01em;
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+  }
 }
 
 .form__policy {
@@ -157,6 +157,14 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+
+  &:checked + .form__policy-svg {
+    border: none;
+  }
+
+  &:checked + .form__policy-svg .form__policy-use {
+    display: block;
+  }
 }
 
 .form__policy-use {
@@ -167,14 +175,6 @@
   border: 2px solid $primary-text-color;
   border-radius: 2px;
   margin-right: 7px;
-}
-
-.form__checkbox:checked + .form__policy-svg {
-  border: none;
-}
-
-.form__checkbox:checked + .form__policy-svg .form__policy-use {
-  display: block;
 }
 
 .form__agreement-link {
@@ -206,8 +206,8 @@
   cursor: pointer;
 
   transition: background-color 250ms $transit-time;
-}
 
-.modal__btn:hover {
-  background-color: $btn-hover-color;
+  &:hover {
+    background-color: $btn-hover-color;
+  }
 }

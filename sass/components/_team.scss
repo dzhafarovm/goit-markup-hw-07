@@ -15,10 +15,10 @@
   overflow: hidden;
   box-shadow: $box-team-shadow;
   background-color: $white-color;
-}
 
-.team-set__item:not(:last-child) {
-  margin-right: 30px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .team-set__cont {
@@ -56,25 +56,22 @@
   margin-right: 10px;
 }
 
-.icons-set__link,
-.icons-set__connect-link {
+.icons-set__link {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-}
 
-.icons-set__link {
   background-color: $white-color;
   fill: $clients-networks-color;
 
   transition: background-color 250ms $transit-time, fill 250ms $transit-time;
-}
 
-.icons-set__link:hover,
-.icons-set__link:focus {
-  background-color: $accent-color;
-  fill: $white-color;
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    fill: $white-color;
+  }
 }

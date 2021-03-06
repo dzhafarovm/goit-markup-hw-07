@@ -10,10 +10,10 @@
 
 .can-set__item {
   width: 270px;
-}
 
-.can-set__item:not(:last-child) {
-  margin-right: 30px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .can-set__link {
